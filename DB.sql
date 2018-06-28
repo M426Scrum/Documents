@@ -18,7 +18,7 @@ USE `room_management` ;
 -- Table `room_management`.`event`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `room_management`.`event` (
-  `eventId` INT(11) NOT NULL,
+  `eventId` INT(11) NOT NULL AUTO_INCREMENT,
   `title` VARCHAR(45) NOT NULL,
   `description` VARCHAR(100) NULL DEFAULT NULL,
   `organiser` VARCHAR(100) NULL DEFAULT NULL,
@@ -31,7 +31,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `room_management`.`room`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `room_management`.`room` (
-  `roomId` INT(11) NOT NULL,
+  `roomId` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `description` VARCHAR(100) NULL DEFAULT NULL,
   PRIMARY KEY (`roomId`))
@@ -43,7 +43,7 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `room_management`.`reservation`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `room_management`.`reservation` (
-  `reservationId` INT(11) NOT NULL,
+  `reservationId` INT(11) NOT NULL AUTO_INCREMENT,
   `start` DATETIME NOT NULL,
   `end` DATETIME NOT NULL,
   `Room_roomId` INT(11) NOT NULL,
